@@ -10,6 +10,7 @@ form.querySelectorAll("input").forEach(input => {
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
+    
     const data = Object.fromEntries(new FormData(form).entries());
     try {
         validateData(data);
@@ -20,7 +21,6 @@ form.addEventListener("submit", (event) => {
 
             errors.forEach(error => {
                 const spanError = document.getElementById(`${error.field}Error`);
-                spanError.textContent = ""
                 if (spanError) spanError.textContent = error.message;
             });
         }
@@ -30,10 +30,17 @@ form.addEventListener("submit", (event) => {
 
 function validateData(data) {
     const { email, password } = data;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    
     const errors = [];
 
-    if (!email) errors.push({field:"email", message:"El email es obligatorio"});
+
+ 
+    if (!emailRegex.test(email) && !email) errors.push({field:"email", message:"ingresa un correo electrónico válido"});
+    
     if (!password) errors.push({field:"password", message:"La contraseña obligatoria" });
+
 
     if (errors.length > 0) throw new ValidateDataError(errors)
 }
