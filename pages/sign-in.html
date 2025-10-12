@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/sign.css">
+    <title>Sign in</title>
+</head>
+
+<body>
+    <main>
+        <form>
+            <h1>Welcome back!</h1>
+            <div class="email-content">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="alejandro.larin@gmail.com" autocomplete="email">
+                <span id="emailError"></span>
+            </div>
+
+            <div class="password-content">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" autocomplete="current-password">
+                <span id="passwordError"></span>
+                <a href="">Forgot your password?</a>
+            </div>
+               <button>Login</button>
+            <p>or</p>
+            <div class="oauth-content">
+                <button class="btn-google" type="button"><span></span> Facebook</button>
+                <button class="btn-google" type="button"><span></span> Google</button>
+            </div>
+            <p>Don't have on account?</p>
+
+            <a href="/sign-up">Create account</a>
+        </form>
+
+        <section></section>
+    </main>
+
+    <script type="module"  src="/assets/js/sign-in.js"></script>
+</body>
+
+</html>
