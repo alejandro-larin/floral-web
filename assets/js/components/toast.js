@@ -1,8 +1,8 @@
-export function showErrorToast(message, duration = 3000) {
-    const container = document.getElementById('toast-container');
-
+export function showToast(message, type) {
+    const container = document.getElementById(`toast-container-${type}`);
+    const duration = 2500
     const toast = document.createElement('div');
-    toast.className = 'toast';
+    toast.className = `toast-${type}`;
     toast.textContent = message;
 
     container.appendChild(toast);

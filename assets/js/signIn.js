@@ -1,5 +1,5 @@
 import { clearFormErrors, CredentialsError, ValidateDataError } from "./lib/error.js";
-import { showErrorToast } from "./components/toast.js";
+import {  showToast } from "./components/toast.js";
 import { addToken } from "./lib/tokenCookie.js";
 import { redirectToHome } from "./lib/redirect.js";
 import { verifyCredentials } from "./lib/userStorage.js";
@@ -25,7 +25,7 @@ form.addEventListener("submit", (event) => {
             });
         }
         if (error instanceof CredentialsError) {    
-            showErrorToast(error.message);
+            showToast(error.message, "form-error");
         }
     }
 });
