@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../../assets/js/auth.js" defer></script>
+    <script type="module" src="/assets/js/auth.js" defer></script>
+
+    <link rel="icon" type="image/png" href="/assets/img/icon.webp">
+    <link rel="stylesheet" href="/assets/css/globals.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     <title>Home</title>
 </head>
-<body>
-    
 
+<body>
+    <div class="overlay"></div>
+    <header>
+        <nav>
+            <div class="logo-content">
+                <span class="logo">F</span>
+                <span class="title">Floral</span>
+            </div>
+            <div class="container">
+                <button class="delete-storage">Eliminar almacenamiento</button>
+                <button class="sign-out">Cerrar sesión</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h1>Bienvenido a <span>Floral</span></h1>
+            <p>Una experiencia elegante y moderna inspirada en la <br> belleza natural</p>
+        </section>
+
+        <section class="content-btn">
+            <button class="btn-start">Comenzar ahora</button>
+            <button class="btn-explorer">Explorar</button>
+        </section>
+
+        <section class="content-card">
+            <div class="card">
+                <div class="icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <p class="title"><strong>Rápido</strong></p>
+                <p class="description">Experiencia optimizada y fluida en <br> todos los dispositivos</p>
+            </div>
+            <div class="card">
+                <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg></div>
+                <p class="title"><strong>Seguro</strong></p>
+                <p class="description">Tus datos protegidos con los más <br> altos estándares de seguridad</p>
+            </div>
+            <div class="card">
+                <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg></div>
+                <p class="title"><strong>Elegante</strong></p>
+                <p class="description">Diseño moderno inspirado en la <br> naturaleza y la simplicidad</p>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
