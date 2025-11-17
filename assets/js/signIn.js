@@ -1,6 +1,6 @@
 import { clearFormErrors, CredentialsError, ValidateDataError } from "./lib/error.js";
 import { showErrorToast } from "./components/toast.js";
-import { addToken } from "./lib/tokenStorage.js";
+import { addToken } from "./lib/tokenCookie.js";
 import { redirectToHome } from "./lib/redirect.js";
 import { verifyCredentials } from "./lib/userStorage.js";
 

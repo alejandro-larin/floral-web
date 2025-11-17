@@ -1,4 +1,4 @@
-import { verifyTokenInAuthRoute, verifyTokenInPrivateRoute } from "./lib/tokenStorage.js";
+import { verifyTokenInAuthRoute, verifyTokenInPrivateRoute } from "./lib/tokenCookie.js";
 const privateRoutes = ["index.html"];
 
 const url = new URL(document.URL);
