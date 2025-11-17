@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+:root {
+    --background: oklch(.12 .02 260);
+    --foreground: oklch(.95 .01 320);
+    --font-family: "Geist", sans-serif;
+    --form: oklch(.15 .02 260);
+    --form-foreground: oklch(.95 .01 320);
+    --popover: oklch(.15 .02 260);
+    --popover-foreground: oklch(.95 .01 320);
+    --primary: oklch(.72 .08 15);
+    --primary-foreground: oklch(.12 .02 260);
+    --secondary: oklch(.25 .02 260);
+    --secondary-foreground: oklch(.95 .01 320);
+    --muted: oklch(.25 .02 260);
+    --muted-foreground: oklch(.6 .02 260);
+    --gray: oklch(87.2% 0.01 258.338);
+    --gray-2: oklch(70.7% 0.022 261.325);
+    --destructive: oklch(53.444% 0.13875 20.267);
+    --destructive-foreground: oklch(.985 0 0);
+    --border: oklch(.25 .02 260);
+    --input: oklch(.2 .02 260);
+    --chart-1: oklch(.646 .222 41.116);
+    --chart-2: oklch(.6 .118 184.704);
+    --chart-3: oklch(.398 .07 227.392);
+    --chart-4: oklch(.828 .189 84.429);
+    --chart-5: oklch(.769 .188 70.08);
+    --radius: .75rem;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --spacing: 0.25rem;
+}
