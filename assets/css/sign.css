@@ -3,6 +3,7 @@
 :root {
     --background: oklch(.12 .02 260);
     --foreground: oklch(.95 .01 320);
+    --font-family: "Geist", sans-serif;
     --form: oklch(.15 .02 260);
     --form-foreground: oklch(.95 .01 320);
     --popover: oklch(.15 .02 260);
@@ -17,7 +18,6 @@
     --destructive-foreground: oklch(.985 0 0);
     --border: oklch(.25 .02 260);
     --input: oklch(.2 .02 260);
-    --ring: oklch(.72 .08 15);
     --chart-1: oklch(.646 .222 41.116);
     --chart-2: oklch(.6 .118 184.704);
     --chart-3: oklch(.398 .07 227.392);
@@ -29,66 +29,68 @@
     --spacing: 0.25rem;
 }
 
-
 body {
     margin: 0;
+    visibility: hidden;
 }
 
 main {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("/assets/img/background.webp");
-  background-size: cover;
-  background-position: center center;
-  overflow: hidden;
+
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/img/background.webp");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
 }
 
 /* Capa de desenfoque */
 main .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(26, 29, 46, 0.8);
-  backdrop-filter: blur(4px);
-  z-index: 1;
-  animation: filter-animation 8s ease-in-out infinite alternate;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(26, 29, 46, 0.8);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    animation: filter-animation 8s ease-in-out infinite alternate;
 }
 
 /* Asegura que el contenido esté por encima del overlay */
-main > *:not(.overlay) {
-  position: relative;
-  z-index: 2;
+main>*:not(.overlay) {
+    position: relative;
+    z-index: 2;
 }
 
 /* Animación suave del desenfoque */
 @keyframes filter-animation {
-  from {
-    backdrop-filter: blur(2px);
-    background-color: rgba(26, 29, 46, 0.6);
-  }
-  to {
-    backdrop-filter: blur(8px);
-    background-color: rgba(26, 29, 46, 0.9);
-  }
+    from {
+        backdrop-filter: blur(2px);
+        background-color: rgba(26, 29, 46, 0.6);
+    }
+
+    to {
+        backdrop-filter: blur(8px);
+        background-color: rgba(26, 29, 46, 0.9);
+    }
 }
 
-/* Ejemplo de estilo para tu form */
+
 form {
-  position: relative;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 0.75rem;
-  z-index: 2;
-  color: white;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    z-index: 2;
+    color: white;
 }
 
 
 form {
     display: flex;
     flex-direction: column;
-    font-family: "Geist", sans-serif;
+    font-family: var(--font-family);
     width: 24rem;
     color: var(--form-foreground);
     border-color: var(--border);
@@ -104,26 +106,26 @@ header {
     gap: calc(var(--spacing) * 2);
 }
 
-header > .flower {
+header>.flower {
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: calc(var(--spacing) * 12) ;
+    width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 12);
     background-color: color-mix(in oklab, var(--primary) 20%, transparent);
     border-radius: calc(infinity * 1px);
     color: var(--primary);
 }
 
-header > h1{
+header>h1 {
     margin-bottom: calc(var(--spacing) * 3);
     font-size: 1.875rem;
     text-align: center;
     margin: 0;
 }
 
-header > p{
+header>p {
     margin: 0;
     text-align: center;
     font-size: var(--text-sm);
@@ -178,13 +180,18 @@ a:hover {
     color: var(--secondary-foreground);
 }
 
-.error{
-    color: var(--destructive) ;
+.error {
+    color: var(--destructive);
     font-size: var(--text-sm);
 }
 
+.helper-text {
+    font-size: var(--text-xs);
+    color: var(--muted-foreground);
+}
 
-section > button {
+
+section>button {
     width: 100%;
     padding: 0.625rem 1rem;
     background-color: var(--primary);
@@ -199,11 +206,11 @@ section > button {
     transition: .5s ease-in-out;
 }
 
-section > button:hover {
+section>button:hover {
     opacity: 0.8;
 }
 
-section > button:active{
+section>button:active {
     scale: 0.9;
 }
 
@@ -219,7 +226,6 @@ section > button:active{
     text-transform: uppercase;
     font-size: var(--text-sm);
     padding: 0 var(--spacing);
-
 }
 
 .interlined-text::before,
@@ -236,7 +242,7 @@ section > button:active{
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.oauth-content > button {
+.oauth-content>button {
     padding: calc(var(--spacing) * 2);
     border-radius: var(--radius);
     background-color: oklch(.2 .02 260);
@@ -251,14 +257,16 @@ section > button:active{
     cursor: pointer;
     transition: .5s ease-in-out;
 }
-.oauth-content > button:hover {
+
+.oauth-content>button:hover {
     opacity: 0.8;
 }
-.oauth-content > button:active {
+
+.oauth-content>button:active {
     scale: 0.9;
 }
 
-.oauth-content > button > svg {
+.oauth-content>button>svg {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
 }
@@ -266,7 +274,7 @@ section > button:active{
 
 
 
-footer > p{
+footer>p {
     font-size: var(--text-sm);
     color: var(--muted-foreground);
     text-align: center;
@@ -278,4 +286,3 @@ footer {
     flex-direction: column;
     gap: calc(var(--spacing)*6);
 }
-
