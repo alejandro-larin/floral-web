@@ -1,25 +1,54 @@
-
-#toast-container {
+#toast-container-succes {
     position: fixed;
-    bottom: 75px;
+    top: calc(var(--spacing)*3);
     z-index: 9999;
 }
 
-.toast {
+#toast-container-form-error {
+    position: fixed;
+    bottom: calc(var(--spacing)*21);
+    z-index: 9999;
+}
+
+.toast-form-error {
     background-color: var(--destructive);
     color: var(--foreground);
-    font-family:  var(--font-family);
+    font-family: var(--font-family);
     font-size: var(--text-sm);
     padding: 16px 24px;
     margin-top: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.5s, transform 0.5s;
 }
 
-.toast.show {
+.toast-form-error.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-succes {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: var(--primary);
+    font-family: var(--font-family);
+    font-size: var(--text-md);
+    padding: 16px 24px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+
+
+.toast-succes.show {
     opacity: 1;
     transform: translateY(0);
 }
