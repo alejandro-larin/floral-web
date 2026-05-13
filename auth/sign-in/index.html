@@ -4,22 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
- 
-    <script type="module" src="/assets/js/auth.js"></script>
+    <title>Sign in</title>
     <link rel="icon" type="image/png" href="/assets/img/icon.webp">
+    <script type="module" src="/assets/js/auth.js"></script>
     <link rel="stylesheet" href="/assets/css/globals.css">
     <link rel="stylesheet" href="/assets/css/sign.css">
-
+    <link rel="stylesheet" href="/assets/css/toast.css">
 </head>
 
 <body>
-    <script type="module" src="/assets/js/auth.js"></script>
     <main>
         <div class="overlay"></div>
         <form>
-
-
             <header class="welcome-content">
                 <div class="flower">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -34,20 +30,13 @@
                         <path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"></path>
                     </svg>
                 </div>
-                <h1>Crear cuenta</h1>
+                <h1>Bienvenido</h1>
                 <p class="text-muted">
-                    Completa el formulario para registrarte
+                    Ingresa tus credenciales para continuar
                 </p>
             </header>
 
             <section>
-                <div class="container">
-                    <label for="username">Nombre completo</label>
-
-                    <input type="text" id="username" name="username" placeholder="Jonh Doe" autocomplete="given-name">
-                    <span id="usernameError" class="error"></span>
-                </div>
-
                 <div class="container">
                     <label for="email">Correo electrónico</label>
 
@@ -56,32 +45,23 @@
                 </div>
 
                 <div class="container">
-
-                    <label for="password">Contraseña</label>
+                    <div style="display: flex; justify-content: space-between;">
+                        <label for="password">Contraseña</label>
+                        <a href="">¿Olvidaste tu contraseña?</a>
+                    </div>
 
                     <input type="password" id="password" name="password" placeholder="••••••••"
                         autocomplete="current-password">
-                    <span class="helper-text">Mínimo 8 caracteres</span>
-                    <br>
                     <span id="passwordError" class="error"></span>
                 </div>
 
-                <div class="container">
-
-                    <label for="confirmPassword">Confirmar contraseña</label>
-
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••"
-                        autocomplete="off">
-                    <span id="confirmPasswordError" class="error"></span>
-                </div>
-
-                <button>Regístrarse</button>
+                <button>Iniciar sesión</button>
             </section>
 
 
             <footer>
                 <div class="interlined-text">
-                    <span>O regístrate con</span>
+                    <span>O continúa con</span>
                 </div>
 
                 <div class="oauth-content">
@@ -112,12 +92,13 @@
                     </button>
                 </div>
 
-                <p class="text-muted text-dont-account">¿Ya tienes una cuenta? <a href="./sign-in.html">Inicia sesión</a></p>
+                <p class="text-muted text-dont-account">¿No tienes una cuenta? <a href="/auth/sign-up/">Regístrate</a></p>
             </footer>
         </form>
+        <div id="toast-container-form-error"></div>
     </main>
-    
-    <script type="module" src="/assets/js/signUp.js"></script>
+  
+    <script type="module" src="/assets/js/signIn.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,8 @@
 import { url } from "./lib/const.js";
 import { verifyTokenInAuthRoute, verifyTokenInPrivateRoute } from "./lib/tokenCookie.js";
-const privateRoutes = ["index.html"];
+const privateRoutes = ["/"];
 
-
-const path = url.pathname.split("/")[3]
-
+const path = url.pathname
 
 if (privateRoutes.includes(path)) {
     verifyTokenInPrivateRoute()
