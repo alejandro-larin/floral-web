@@ -1,10 +1,9 @@
 body {
     visibility: hidden;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: var(--font-family);
     position: relative;
-    height: 100vh;
     background-image: url("/floral-web/assets/img/background.webp");
     background-size: cover;
     background-position: center center;
@@ -237,4 +236,82 @@ main>.content-card>.card>.description {
     margin: 0;
     font-size: var(--text-md);
     color: var(--gray-2);
+}
+
+/* =========================
+        RESPONSIVE 
+========================= */
+
+@media (max-width: 1024px) {
+    main>.content-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(var(--spacing) * 4);
+    }
+
+    main>.welcome>h1 {
+        font-size: calc(var(--text-lg) * 3);
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: calc(var(--spacing) * 4);
+        align-items: center;
+    }
+
+    nav>.container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main>.welcome>h1 {
+        font-size: calc(var(--text-lg) * 2.5);
+    }
+
+    main>.welcome>p {
+        font-size: 1.2rem;
+        padding: 0 16px;
+    }
+
+    main>.content-btn {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main>.content-btn>button {
+        width: 80%;
+    }
+
+    main>.content-card {
+        grid-template-columns: 1fr;
+        margin-top: calc(var(--spacing) * 10);
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: calc(var(--spacing) * 4);
+    }
+
+    nav>.logo-content>.title {
+        font-size: var(--text-lg);
+    }
+
+    main>.welcome>h1 {
+        font-size: calc(var(--text-lg) * 2);
+    }
+
+    main>.welcome>p {
+        font-size: 1rem;
+    }
+
+    main>.content-btn>button {
+        width: 100%;
+    }
+
+    main>.content-card>.card {
+        padding: calc(var(--spacing) * 5);
+    }
 }
