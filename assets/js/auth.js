@@ -1,10 +1,12 @@
 import { url } from "./lib/const.js";
 import { verifyTokenInAuthRoute, verifyTokenInPrivateRoute } from "./lib/tokenCookie.js";
-const privateRoutes = ["/"];
+const privateRoutes = ["floral-web","floral-web/index.html"];
 
-const path = url.pathname
+const path = url.pathname.split("/").filter(Boolean).join("/");
 
-if (privateRoutes.includes(path)) {
+const isPrivateRoute = privateRoutes.includes(path);
+
+if (isPrivateRoute) {
     verifyTokenInPrivateRoute()
 } else {
     verifyTokenInAuthRoute()
