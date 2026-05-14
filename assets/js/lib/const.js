@@ -1,5 +1,5 @@
 export const url = new URL(document.URL)
-export const domain = url.origin
+export const domain = `${url.origin}/floral-web`
 
 export const AUTH_ROUTE = `${domain}/auth`
 
