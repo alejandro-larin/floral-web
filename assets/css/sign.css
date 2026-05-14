@@ -10,7 +10,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/img/background.webp");
+    background-image: url("/floral-web/assets/img/background.webp");
     background-size: cover;
     background-position: center center;
     overflow: hidden;

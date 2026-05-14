@@ -5,7 +5,7 @@ body {
     font-family: var(--font-family);
     position: relative;
     height: 100vh;
-    background-image: url("/assets/img/background.webp");
+    background-image: url("/floral-web/assets/img/background.webp");
     background-size: cover;
     background-position: center center;
     overflow: hidden;
